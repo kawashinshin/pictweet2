@@ -10,7 +10,7 @@
     end
 
     def create
-       Tweet.create(name: params[:name], image: params[:image], text: params[:text])
+       Tweet.create(name: params[:name], image: params[:image], text: params[:text], user_id: current_user.id)
     end
 
     private
